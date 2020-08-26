@@ -1,0 +1,54 @@
+extends layouts/_layout.pug
+
+
+block variables
+	- var activePage = 'dashboard';
+	- var activeGroup = 'none';
+block content
+	.app-title
+		div
+			h1
+				i.fa.fa-dashboard
+				|  Admin Dashboard
+			
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.fa.fa-home.fa-lg
+			li.breadcrumb-item
+				a(href='#') Dashboard
+
+	.row
+		.col-md-6.col-lg-3
+			.widget-small.primary.coloured-icon
+				i.icon.fa.fa-users.fa-3x
+				div.info
+					h4 Users
+					each item in users
+						p
+							b #{item.countusers}
+
+		.col-md-6.col-lg-3
+			.widget-small.info.coloured-icon
+				i.icon.fa.fa-thumbs-o-up.fa-3x
+				div.info
+					h4 visits
+					each hits in visitors
+						p
+							b #{hits.visit}
+
+		.col-md-6.col-lg-3
+			.widget-small.warning.coloured-icon
+				i.icon.fa.fa-files-o.fa-3x
+				div.info
+					h4 Uploads
+					p
+						b 10
+
+		.col-md-6.col-lg-3
+			.widget-small.danger.coloured-icon
+				i.icon.fa.fa-star.fa-3x
+				div.info
+					h4 Failure
+					p
+						b 11

@@ -1,0 +1,164 @@
+doctype
+html
+  head
+    title File Converter
+    link(rel='stylesheet', href='/stylesheets/boostrap.min.css', type='text/html')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    // #basicExampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  h5#exampleModalLabel.modal-title Modal title
+                  button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                  | ...
+                .modal-footer
+                  button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                  button.btn.btn-primary(type='button') Save changes      
+  style.
+      button{
+       width: 124px;
+       height: 41px !important;
+       margin-top: 4px;}
+       .btn-info {
+          color: #fff;
+          background-color: #2980B9;
+          border-color: #2980B9;
+      }
+       .btn-group-lg>.btn, .btn-lg {
+            padding: 9px 6px;
+          font-size: 17px;
+          line-height: 1.3333333;
+          border-radius: 3px;
+          box-sizing: border-box;
+    }
+      img{
+          height: 21px;
+          width: 22px;
+          margin-right: 2px;
+          margin-left: -10px;
+          }
+      .navbar {
+          margin-bottom: 0;
+          border-radius: 0;
+        }
+      .navbar-inverse {
+          background-color:#2C3E50;
+          border-color: #080808;
+      }
+      table  { border-collapse: collapse;overflow: auto;background: #fff;
+          width: 100%;
+          flex-direction: column;
+          box-shadow: 0 1px 3px rgba(0,0,0,.05);
+          border-left: 1px solid rgba(0,0,0,.05);
+      }
+      table tr td {
+          padding: 10px 15px;
+          font-size: small;
+          border: 1px solid rgba(0,0,0,.05);
+          overflow: hidden;
+          max-width: 600px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          letter-spacing: .7px;
+      }
+      th     { background:#EAF2F8;border-color: inherit;padding: 15px;font-size: small;font-weight: 500;text-align: left;    font-weight: bolder;
+       }
+      .tableFixHead    { overflow-y: auto; height: auto; }
+      .tableFixHead th { position: sticky; top: 0; }     
+      tr:nth-child(even) {
+      background-color:  #f7f7f7;
+      }
+      .header  {
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    padding: 10px 15px 10px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fff;
+    z-index: 1;
+    min-height: 50px;
+      }
+      body {
+      margin: 0;
+      height: 100%;
+      overflow:hidden;
+      font-family: Open Sans,sans-serif;
+      background-color: #f6f9fc;
+      color: #5a6b82;
+      margin: 0;
+       padding: 0px 0px;
+    }
+body
+   #header
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
+    crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js", integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49",
+    crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy",crossorigin="anonymous")
+.tableFixHead
+nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle(type='button'  data-target='#myNavbar')
+      a.navbar-brand(href='#') 
+    #myNavbar.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          a(href='/form') Home
+        li
+          a(href='/about') About
+      ul.nav.navbar-nav.navbar-right
+        li
+          - var btnType = 'info'
+          - var btnSize = 'lg'
+          form(id='xmlForm' method='POST' action='/xml_export')
+            button( id="expxml"  type="button"  class='btn btn-' + btnType + ' btn-' + btnSize)
+              |Export File 
+              i.fa.fa-download(aria-hidden='true')
+script(type="text/javascript").
+      $( "#expxml").one("click",function(e) {
+      e.preventDefault();
+      $("#xmlForm").trigger('submit');
+      });
+  window.addEventListener("load", function(){
+    
+  // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
+    //var load = (data)
+      var dat= !{JSON.stringify(data)}
+      var output = dat;
+        var columns = dat[0];
+        var html = '';
+      html += "<table  class=\"tableFixHead\" class=\"tablesorter\">\n";
+            html += "\t<thead  >\n";
+            html += "\t\t<tr>\n";            
+            // Columns
+            for (var i = 0; i < columns.length; i++)
+            {
+                html += "\t\t\t<th >"+columns[i]+"</th>\n";
+            }
+            html += "\t\t</tr >\n";
+            html += "\t</thead>\n";
+            html += "\t<tbody >\n";
+            // Body
+            for (i = 1; i < output.length; i++)
+            {
+                var rows = output[i];
+                html += "\t\t<tr>\n";
+                for (j = 0; j < rows.length; j++)
+                {
+                    html += "\t\t\t<td >"+rows[j]+"</td>\n";
+                }
+                html += "\t\t</tr>\n";
+            }
+            html += "\t</tbody>\n";
+            html += "</table>\n";
+            // Create full HTML code
+            document.getElementById("container").innerHTML = html;
+          });
+#container(style='height: 835px;flex-direction:column-reverse;align-items:flex-end;overflow-y:auto;')

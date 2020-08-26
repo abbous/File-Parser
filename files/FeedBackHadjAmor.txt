@@ -1,0 +1,51 @@
+Conversion des données
+injection des données 
+- nature des données + description complète : c'est sont les données des clients de la societé "www" : nom des users + 
+- Pourquoi convertir les données json/csv ... en sql => 
+- A quoi sert la partie ml
+- A quoi sert l'injection des données => 
+
+------------------------------------------------------------Introduction
+1- Blablavbla + refernce (chatbot + importances*) + statistiques
+1.1. ML (Impact et importance de ML)
+2- Problème vecu par la societe : notre societe a un système de chatbot qui malgré le buz qu'il a fait dans le monde(nbr des societes qui utilisent les chatbots+ nbr des emplois + CA grace au chatbot*), notre chatbot n'est utilisé que par 1% de nos clients
+et dont uniquement 20% sont  satisfaits par le produit. => Problème
+Donc la solurtion est de migrer d'un chatbotv statique a un chatbot dynamique : qui va assurer ..... en utilisant les technolgies de l IA et du ML => avoir un chatbot dynamique
++ en utilisant des donnéers des cliuents 
+D'autre cote, les données des clients sont diversifies => Il est important d'avoir un syst compatible avec n importe quel type des données => D'ou l'importance d'avoir un syst de conversion des données
+
+=> Finalement l'idée est de concevoir un chatbot dynamique = syst de conversion des donées  + syst intelligent de conversation
+
+--------------------------------------------------------- Partie 01
+La societe x fournit des solutions informatiques pour des clients à l'international.
+Elle possède un chatbot statique => inconvenients  + nombre des users (faible)
+But=> ameliorer lexperience utilisateur via le schatbot => chatbot dynamique : ML
+Existant : A partir des données des =/= clents => On veut ameliorer notre outil
+Donnes des clients : des fichieres des differnts formats + differents contenu => Solution : Format Standard qui va nous faciliter la tache + compatible avec les technologies de mla societe 
+=> Tu dois justifier le format sql? : - Format standard + avantages des sql
+As tu une autre solution? pk pas le format json? c'est plus compréhensibble pour l etre humain? (Approche NSQL)
+2 approches : comparaison
+conclusion => justifier pk sql
+Etude de l'existant : Un outil on ligne rapide facile robuste (testé) /// - couteux (prix entre et entre + selon les tailles + selon nbr) - non securisé
+=> on prefere utoiliser notre propre outil : Securise + non couteux + custom + on peut encore le developper (à long terme) selon nos futus besoins // - temps du dvpt - a tester la robustesse
+c'est vrai que les outils deja existantes sur le marxhe permettent d'assurer notre satisfaction(robustesse + rapidité + service client(support)), mais, on ne peut pas les utiliser car on perd la securité (engagements clients) + autonomie (à long terme)
+
+---------------------------------------------------------Paertie 02
+1. Description des données => des données desiquilibres
+2. Choix des modeles (pk?) :lstm, blstm, pretraiined models = > unsupervised learning 
+3. Realisation : (train) Kfold(k =4)=> tracer les scores en fct de k => conclusion : pour ne pas avoir le prob des imbalanced data
+
+5 donnes : chat chat chat tv chaise
+train : 3 chats 
+test tv / chaise=????
+========================================================================
+
+•	Description des données : on 1000 fichiers des 400000 users fr avec la langue anglais 
+(perspective : a long terme chatbot avec multilangiages : techniquement : keys pour la traduction), 
+chaque fichier correspond a 100 utilisateurs et contient les colonnes suivants : nom, age, domaine d activite, taille d entreprise, service, question, response (figure : reprsentation des données )
+Chaque user 3andou n lignes : user 3andou 5 luigne et user 3andou 200 ligne => umbalanced Data
+•	Choix des algo : chatbot : lstm (chiffre) gpu => pour cela on va faire une comparaison : Tableau compatif : 
+-	Train / 
+•	Model choisit
+•	resultats
+

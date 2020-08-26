@@ -1,0 +1,47 @@
+doctype html
+head
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r", crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-2.2.4.js", integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=", crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css')
+style.
+  .row {
+    display:flex;
+  }
+  .div1 {
+    flex: 1 1 auto;
+  }
+  /* other stuff */
+  div {
+    padding:1em;
+    margin:0.2em;
+    background-color: rgba(0,0,0,0.125)
+  }
+  .row {
+    width:80%;
+    padding:1em;
+    overflow:hidden;
+  }
+   table.ui.celled img {display: inline-block;}
+body
+        table.ui.celled.table.center.aligned
+            each item in data
+                   end
+                      tr
+                        td(colspan='20') #{item[1]}
+                              td #{item[2]}
+                              td #{item[3]}
+                              td #{item[4]}
+                              td #{item[5]}
+                              td #{item[6]}
+                              td #{item[7]}
+                              td #{item[8]}
+                              td #{item[9]}
+                              td #{item[10]}
+                              td #{item[11]}
+                              td #{item[12]}
+                              td #{item[14]}
+                              td #{item[15]}
+                              td #{item[16]}
+                              td #{item[17]}

@@ -1,0 +1,98 @@
+
+
+    .card{
+    border-radius: 1.25rem;
+    width: 44rem;
+    margin: auto;
+    margin-top: 60px;
+    height: 33rem;
+    box-shadow: 0px 0px 10px #c1c1c18c;
+    
+    }
+    .card-footer:last-child {
+    border-radius: 0 0 calc(1.25rem - 1px) calc(1.25rem - -1px);
+}
+    
+    .btn-file {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-file input[type=file] {
+        overflow: hidden;
+      position: sticky;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+      width: 5px;
+        height: 5px;
+    
+    }
+    label {
+      display: flex;
+    margin-bottom: .5rem;
+    padding: 49px 185px;
+    }
+    .lable.custom-file-upload{
+      padding: 34px 197px;
+    }
+   
+    .dropzone {
+      border: 4px dashed #dedede;
+    border-radius: 5px;
+    background: #f7f7f7;
+    padding: 5px 1px;
+    }
+    
+    .dropzone i{
+      font-size: 5rem;
+    }
+    
+    .dropzone .dz-message {
+      color: rgba(0,0,0,.54);
+      font-weight: 500;
+      font-size: initial;
+      text-transform: uppercase;
+    padding: 25px;
+    position: relative;
+    }
+    .material-icons.md-36 {  
+       font-size: 36px; 
+ }
+ .alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #d39e008a;
+    padding: 8px 181px;
+    margin-left: 0px;
+    padding-bottom: 13px;
+ }
+    .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 7px 22px;
+}
+b, strong {
+    font-weight: bolder;
+}
+.text-muted {
+    color: #dc3545!important;
+    font-size: inherit;
+} 
+.p#file-name{
+  padding: 7px 22px;
+
+}
+#drop-area.highlight {
+  border-color: purple;
+}
